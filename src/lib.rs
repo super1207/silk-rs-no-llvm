@@ -22,7 +22,7 @@ pub(crate) use fast_check;
 #[allow(non_snake_case)]
 #[allow(non_upper_case_globals)]
 pub(crate) mod sdk {
-    include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
+    include!("bindings.rs");
 }
 
 #[cfg(test)]

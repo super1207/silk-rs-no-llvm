@@ -1,4 +1,4 @@
-use silk_rs::{decode_silk, encode_silk};
+use silk_rs_no_llvm::{decode_silk, encode_silk};
 
 fn main() {
     let input = std::fs::read("test.pcm").unwrap();
