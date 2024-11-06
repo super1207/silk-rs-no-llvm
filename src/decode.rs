@@ -10,7 +10,7 @@ pub fn decode_silk(src: impl AsRef<[u8]>, sample_rate: i32) -> Result<Vec<u8>, S
 
 unsafe fn _decode_silk(mut src: &[u8], sample_rate: i32) -> Result<Vec<u8>, SilkError> {
     // skip tencent flag
-    if src.starts_with(b"\x02") {
+    if src.starts_with(b"\x02") || src.starts_with(b"\x03") {
         src.advance(1);
     };
 
